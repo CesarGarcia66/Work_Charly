@@ -33,6 +33,16 @@ print("Problem 1:")
 #Description: Create a Python program that formats a full name, removes extra spaces,
 #converts it to Title Case, generates initials, and validates the input.
 
+#Validations:
+#- full_name must not be empty after strip().
+#- Must contain at least two words.
+#- Do not accept strings that consist only of spaces.
+
+#Test cases:
+#1) Normal: "juan carlos tovar perez"
+#2) Border: "ana 123"
+#3) Error: "" (empty)
+
 #inputs
 full_name = "Cesar garcia enrique samano"
 
@@ -56,6 +66,16 @@ print("Problem 2:")
 #Descrpition:Create a Python program that checks if an email address has a basic valid
 #format. It verifies the presence of exactly one '@', a dot after it, and no spaces.
 #If the email is valid, the program also displays its domain.
+
+#Validations:
+#- email_text must not be empty after strip().
+#- Count how many times '@' appears.
+#- Verify that there are no blank spaces.
+
+#Test cases:
+#1) Normal: "usuario@gmail.com"
+#2) Border: "a@b.c"
+#3) Error: "usuariogmail.com"
 
 #inputs:
 email_text = input("Ingresa un correo:")
@@ -88,6 +108,15 @@ print("Problem 3:")
 #by ignoring spaces and uppercase or lowercase letters. 
 #The program displays the normalized phrase and whether it is a palindrome.
 
+#Validations:
+#- phrase must not be empty after strip().
+#- Minimum reasonable length after clearing spaces (at least 3 characters).
+
+#Test cases:
+#1) Normal: "Anita lava la tina"
+#2) Border: "Aba"
+#3) Error: "Ab" (too short)
+
 #inputs:
 phrase = input(" insert prhase: ")
 
@@ -110,6 +139,15 @@ print("problem 4")
 #Description: This practice consists of analyzing a sentence to count its words, 
 #identify the first and last words, and find the shortest and longest words. 
 #It uses Python string methods such as strip(), split(), and len() to process and validate the input.
+
+#Validations:
+#- Sentence must not be empty after strip().
+#- Must contain at least one valid word after split().
+
+#Test cases:
+#1) Normal: "El perro corre rapido"
+#2) Border: "Hola"
+#3) Error: "" (empty)
 
 #input
 sentence = input("insert sentence:")
@@ -144,6 +182,15 @@ print("problem 5")
 #its strength as weak, medium, or strong based on its length and the types of characters
 #it contains. It also validates that the password is not empty and uses Python
 #string methods to check its characteristics.
+
+#Validations:
+#- Do not accept an empty password.
+#- Verify length using len().
+
+#Test cases:
+#1) Normal: "Abc12345#" (strong)
+#2) Border: "abcdefgh" (weak/medium)
+#3) Error: "" (empty)
 
 #inputs:
 password_input = input("Password classifier:")
@@ -186,6 +233,15 @@ print("problem 6")
 #in Python. The goal is to build a standard product label string with a fixed length
 #of 30 characters using string slicing, length checks (len()), 
 #conditional statements (if/elif/else), and space padding.
+
+#Validations:
+#- product_name must not be empty after strip().
+#- price_value must be convertible to a positive number.
+
+#Test cases:
+#1) Normal: product_name = "Laptop", price_value = "1200"
+#2) Border: product_name = "A"*30, price_value = "0"
+#3) Error: product_name = "", price_value = "-5"
 
 # Inputs:
 product_name = input("Enter product name: ")
@@ -235,8 +291,3 @@ print("----------------------------------")
 # 5) LabEx. "Cómo comprobar si una cadena contiene solo letras en Python"
 #    (uso de isalpha() para validar la entrada del usuario).
 #    https://labex.io/es/tutorials/python-how-to-check-if-a-string-contains-only-letters-in-python-559569
-
-
-
-
-
